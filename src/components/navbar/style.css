@@ -21,7 +21,7 @@
 }
 
 .navContainer{
-    position: relative;
+    position: fixed;
     width: 180px;
     height: 0px;
 }

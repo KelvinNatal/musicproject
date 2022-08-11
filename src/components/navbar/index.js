@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const NavBar = () => {
 
+    useEffect(() => {       
+       Anim();
+    }, []);
+
+   const Anim = () => {
     let list = document.querySelectorAll(".navitem");
     function setActiveClass () {
         list.forEach((item) => 
@@ -10,6 +17,7 @@ const NavBar = () => {
     }
     list.forEach((item) => 
     item.addEventListener('mouseover', setActiveClass))
+   }
 
   return (
     <>
@@ -17,21 +25,21 @@ const NavBar = () => {
             <div className='navContainer'>
                 <div className="d-flex nave">
                     <ul>
-                        <li className="navitem active">
-                            <a href="#">
+                        <li className="navitem active">                            
+                            <Link to ="/">
                             <span className="icon">
                                 <ion-icon name="home-outline"></ion-icon>
                             </span>
                             <span className="text">Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="navitem">
-                            <a href="#">
+                            <Link to ="/player">
                             <span className="icon">
                                 <ion-icon name="play-circle-outline"></ion-icon>
                             </span>
                             <span className="text">Play</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="navitem">
                             <a href="#">

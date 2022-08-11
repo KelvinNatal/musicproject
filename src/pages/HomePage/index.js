@@ -3,7 +3,7 @@ import './style.css';
 const HomePage = () => {
     return (
       <>
-          <div className='main d-flex'>
+          <div className='conteudo d-flex'>
             <h1 className='text-light'></h1>
           </div>
       </>   

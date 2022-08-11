@@ -1,11 +1,28 @@
-import './style.css';
+import React from "react";
+
+import '../../main.css';
+import '../../input.css'
+import Header from "../../components/header";
+import Controls from "../../components/controls/Controls";
+import Actions from "../../components/playlist/Actions";
+import Playlist from "../../components/playlist/Playlist";
+import PlayerState from "../../context/PlayerState";
 
 const PlayerPage = () => {
     return (
       <>
-          <div className='main d-flex'>
-            <h1 className='text-light'></h1>
-          </div>
+          
+                <PlayerState>
+                <div className="main">
+                    <div className="top">
+                        <Header/>
+                        <Actions/>
+                        <Playlist/>
+                    </div>
+                    <Controls/>
+                </div>
+                </PlayerState>
+          
       </>   
     );
   }

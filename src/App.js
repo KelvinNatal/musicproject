@@ -5,7 +5,7 @@ import Routte from './Routes';
 function App() {
   return(
     <>    
-      <NavBar/>  
+      
       <Routte/>
     </>
   );
