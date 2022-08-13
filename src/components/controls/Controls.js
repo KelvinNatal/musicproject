@@ -8,8 +8,8 @@ function Controls() {
   const {
     currentSong,
     songs,
-    nextSong,
     prevSong,
+    nextSong,
     repeat,
     random,
     playing,

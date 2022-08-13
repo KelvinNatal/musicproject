@@ -40,13 +40,14 @@ const PlayerState = (props) => {
       SetCurrent(state.currentSong - 1)
     }
   }
+
   // Next song
   const nextSong = () => {
-    if (state.currentSong === state.songs.length - 1) {
-      SetCurrent(0)
-    } else {
-      SetCurrent(state.currentSong + 1)
-    }
+    SetCurrent(state.currentSong + 1)
+  } 
+   // Repeat song
+   const repeatSong = () => {  
+    SetCurrent(state.currentSong - 1)
   }
 
   // Repeat and Random
@@ -65,11 +66,16 @@ const PlayerState = (props) => {
       })
     } else {
       if (state.repeat) {
-        nextSong()
-      } else if (state.currentSong === state.songs.length - 1) {
+          
+        if(state.currentSong !== 0 ){
+            repeatSong();
+        }else {
+            console.log('erro')
+        }
+      } /*else if(state.currentSong === state.songs.length - 1) {
         return
-      } else {
-        nextSong()
+      }*/ else {
+      nextSong()      
       }
     }
   }

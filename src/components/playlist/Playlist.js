@@ -27,12 +27,12 @@ const Playlist = () => {
                 <span className="songauthors">{song.artistName}</span>
               </div>
               <div className="playlist_btns_group">
-                <button className="fav_song playlist_btn">
+                {/*<button className="fav_song playlist_btn">
                   <i className="far fa-heart fa-lg"></i>
                 </button>
                 <button className="options_song playlist_btn">
                   <i class="fas fa-ellipsis-v fa-lg"></i>
-                </button>
+                </button>*/}
               </div>
             </li>
           ))}
