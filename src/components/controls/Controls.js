@@ -64,7 +64,48 @@ function Controls() {
         preload="true"
         src={songslist[currentSong].fileUrl}
       />
-      <div className="vlme">
+      <input
+          onChange={handleProgress}
+          value={dur ? (currentTime * 100) / dur : 0}
+          type="range"
+          name="progresBar"
+          id="prgbar"
+        />
+        
+        
+      <div className="d-flex todo">      
+        <div className="progressb">        
+          <div className="songMeta">
+            <span className="songtitle">{songslist[currentSong].title}</span>
+            <span className="songartistName">
+              {songslist[currentSong].artistName}
+            </span>
+          </div>
+        </div>
+        
+        <div className="musicControls">        
+          <span className="prev" onClick={prevSong}>
+            <i className="fas fa-step-backward"></i>
+          </span>
+          <span
+            className="play"
+            onClick={() => {
+              togglePlaying()
+              toggleAudio()
+            }}
+          >
+          <span className={!playing ? '' : 'hide'}>
+            <i className="fas fa-play"></i>
+          </span>
+          <span className={!playing ? 'hide' : ''}>
+            <i className="fas fa-pause"></i>
+          </span>
+        </span>
+        <span className="next" onClick={nextSong}>
+          <i className="fas fa-step-forward"></i>
+        </span>
+        </div>
+        <div className="vlme">        
         <span className="volum">
           <i className="fas fa-volume-down"></i>
         </span>
@@ -75,48 +116,6 @@ function Controls() {
           id="volBar"
           onChange={(e) => handleVolume(e.target.value / 100)}
         />
-      </div>
-      <div className="musicControls">
-        <span className="prev" onClick={prevSong}>
-          <i className="fas fa-step-backward"></i>
-        </span>
-
-        <span
-          className="play"
-          onClick={() => {
-            togglePlaying()
-            toggleAudio()
-          }}
-        >
-          <span className={!playing ? '' : 'hide'}>
-            <i className="fas fa-play"></i>
-          </span>
-          <span className={!playing ? 'hide' : ''}>
-            <i className="fas fa-pause"></i>
-          </span>
-        </span>
-
-        <span className="next" onClick={nextSong}>
-          <i className="fas fa-step-forward"></i>
-        </span>
-      </div>
-
-      <div className="progressb">
-        <div className="songMeta">
-          <span className="songtitle">{songslist[currentSong].title}</span>
-          <span className="songartistName">
-            {songslist[currentSong].artistName}
-          </span>
-        </div>
-        <input
-          onChange={handleProgress}
-          value={dur ? (currentTime * 100) / dur : 0}
-          type="range"
-          name="progresBar"
-          id="prgbar"
-        />
-        <span className="currentT">{fmtMSS(currentTime)}</span>/
-        <span className="totalT">{fmtMSS(dur)}</span>
       </div>
       <div className="plsoptions">
         <span
@@ -130,7 +129,13 @@ function Controls() {
           className={'repeat ' + (repeat ? 'active' : '')}
         >
           <i className="fas fa-redo-alt"></i>
-        </span>
+          
+        </span>        
+      </div>
+      <div className="time">
+        <span className="currentT">{fmtMSS(currentTime)}</span>/
+        <span className="totalT">{fmtMSS(dur)}</span>
+      </div>
       </div>
     </div>
   )

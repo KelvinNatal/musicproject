@@ -11,6 +11,7 @@ import {
   TOGGLE_PLAYING,
   SET_SONGS_ARRAY,
 } from '../types'
+import { resolvePath } from 'react-router-dom';
 
 const PlayerState = (props) => {
   const initialState = {
@@ -35,19 +36,28 @@ const PlayerState = (props) => {
   // Prev song
   const prevSong = () => {
     if (state.currentSong === 0) {
-      SetCurrent(state.songs.length - 1)
-    } else {
+      SetCurrent(state.songslist.length - 1)
+    } 
+    else {
       SetCurrent(state.currentSong - 1)
     }
   }
 
   // Next song
   const nextSong = () => {
-    SetCurrent(state.currentSong + 1)
+    if (state.currentSong === state.songslist.length - 1) {
+      SetCurrent(0)
+    } else {
+      SetCurrent(state.currentSong + 1)
+    }
   } 
    // Repeat song
-   const repeatSong = () => {  
-    SetCurrent(state.currentSong - 1)
+   const repeatSong = (teste2, testando) => {
+    if(state.currentSong === testando){
+        console.log(teste2, testando)
+    }else{
+        nextSong()
+    } 
   }
 
   // Repeat and Random
@@ -62,21 +72,18 @@ const PlayerState = (props) => {
     if (state.random) {
       return dispatch({
         type: SET_CURRENT_SONG,
-        data: ~~(Math.random() * state.songs.length),
+        data: ~~(Math.random() * state.songslist.length),
       })
     } else {
       if (state.repeat) {
-          
-        if(state.currentSong !== 0 ){
-            repeatSong();
-        }else {
-            console.log('erro')
-        }
-      } /*else if(state.currentSong === state.songs.length - 1) {
+        var teste2 = state.currentSong
+        var testando = 0;
+        repeatSong(teste2,testando)
+      } /*else if(state.currentSong === state.song_list.length - 1) {
         return
       }*/ else {
-      nextSong()      
-      }
+        nextSong()      
+      }      
     }
   }
 
@@ -92,6 +99,7 @@ const PlayerState = (props) => {
         audio: state.audio,
         nextSong,
         prevSong,
+        repeatSong,
         SetCurrent,
         toggleRandom,
         toggleRepeat,

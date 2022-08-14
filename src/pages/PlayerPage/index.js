@@ -14,7 +14,7 @@ const PlayerPage = () => {
       <PlayerState>
         <div className="corpo">
           <div className="">
-            {/*<Header/>*/}
+            {/*<Header/>*/} 
             <Actions />
             <Playlist />
           </div>

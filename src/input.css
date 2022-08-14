@@ -1,49 +1,48 @@
 input[type=range] {
   -webkit-appearance: none;
-  margin: 10px 0;
+  margin: 10px 0;  
   width: 100%;
 }
 
 input[type=range]:focus {
   outline: none;
+  
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
+  height: 7px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 25px 50px 50px #000000;
-  background: #e9e9e9;
-  border-radius: 5px;
+  background: #006199;
+  border-radius: 0px;
   border: 0px solid #000000;
 }
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 1px #000000;
   border: 0px solid #000000;
-  height: 13px;
-  width: 4px;
+  height: 15px;
+  width: 15px;
   border-radius: 50px;
-  background: #6d6d6d;
+  background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -4px;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #4aa9de;
+input[type=range]:hover::-webkit-slider-runnable-track {
+  background: #ffffff;
 }
 
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
-  background: #4aa9de;
+  background: #00507a;
   border-radius: 5px;
   border: 0px solid #000000;
+  
 }
 
 input[type=range]::-moz-range-thumb {
@@ -54,6 +53,7 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   background: #2a6586;
   cursor: pointer;
+  
 }
 
 input[type=range]::-ms-track {
@@ -64,6 +64,7 @@ input[type=range]::-ms-track {
   background: transparent;
   border-color: transparent;
   color: transparent;
+  transform: rotate(180deg);
 }
 
 input[type=range]::-ms-fill-lower {
@@ -71,6 +72,8 @@ input[type=range]::-ms-fill-lower {
   border: 0px solid #000000;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #000000;
+  
+  
 }
 
 input[type=range]::-ms-fill-upper {
@@ -78,6 +81,7 @@ input[type=range]::-ms-fill-upper {
   border: 0px solid #000000;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #000000;
+  
 }
 
 input[type=range]::-ms-thumb {
@@ -88,16 +92,21 @@ input[type=range]::-ms-thumb {
   border-radius: 50px;
   background: #2a6586;
   cursor: pointer;
+  
+  
 }
 
 input[type=range]:focus::-ms-fill-lower {
   background: #4aa9de;
+  
 }
 
 input[type=range]:focus::-ms-fill-upper {
   background: #4aa9de;
+  
 }
 
 .plsoptions {
   justify-self: flex-end;
+  
 }
