@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
 }
+
 html{
   min-width: 800px;
 }
@@ -9,7 +10,6 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   justify-content: center;
-  height: 100vh;
   background-color: #e3e3e3;
   
 }
@@ -122,6 +122,7 @@ header h3 {
 
 #image_actions{
   height: 200px;
+  margin-left: 3px;
 }
 
 .actions button {
@@ -147,11 +148,66 @@ header h3 {
 .alb_label{
   font-size: 0.8em;
 }
+
+.cabeçalho{
+  margin: 0 auto;
+  width: 83.3vw;
+  height: 50px;
+  background-color: white;
+}
+
+.titulo{
+  padding-left:190px
+}
+
+.album, .albumDesc{
+  padding-left:140px
+}
+
+
+.duracaoDesc{
+  margin-left: 103px;
+  width: 10vw;
+  background-color: white;
+  text-align: center;
+}
+
+.dataDesc{
+  text-align: center;
+  margin-left: 50px;
+  width: 8vw;
+  background-color: white;
+}
+
+.albumDesc{
+  width: 14vw;
+  color: rgb(182, 181, 181);
+  font-size: 1.000rem;
+  padding: 0 0px;
+  margin-left: 120px;
+  background-color: white;
+  
+}
+
+.titulao{
+  width: 40vw;
+  margin-right: -7%;
+  align-items: center;
+}
+
+
+.musicContainer{
+  height: 80px;
+}
+
+
+
 .playlist {
   background: #242424;
   flex: 1 1;
   display: flex;
   flex-direction: column;
+  height: 86vw;
 }
 
 .selected {
@@ -172,13 +228,13 @@ header h3 {
 }
 
 .loi {
-  margin: 0 auto;
   list-style: none;
   display: flex;
   flex-direction: column;
   flex: 1 1;
   padding: 0;
-  width: 70vw;
+  width: 83.49vw;
+  margin: 0 auto;
 }
 
 .loi li {
@@ -192,8 +248,8 @@ header h3 {
   background-color: #363636;
 }
 .tmbn_song {
-  height: 65px;
-  width: 65px;
+  height: 80px;
+  width: 80px;
   background:url('https://freemusicarchive.org/image?file=images%2Falbums%2FSkidmore_College_Orchestra_-_Mussorgskys_Pictures_at_an_Exhibition_-_2009113013701972.jpg&width=290&height=290&type=image');
   background-size: contain;
   color: white;
@@ -213,13 +269,13 @@ header h3 {
 .songname {
   padding: 0 10px;
   font-weight: 600;
-  font-size: 0.825rem;
+  font-size: 1.000rem;
   color: white;
 }
 .songauthors {
   padding: 0 10px;
   font-weight: normal;
-  color: rgb(155, 152, 152);
+  color: rgb(182, 181, 181);
   font-size: 0.875rem;
 }
 .song_duration{
@@ -325,10 +381,6 @@ header h3 {
   z-index: 1;
 }
 
-.todo{
-  
-  
-}
 
 .progressb {
   width: 30%;

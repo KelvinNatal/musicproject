@@ -42,12 +42,12 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li className="navitem">
-                            <a href="#">
+                            <Link to ="/search">
                             <span className="icon">
                                 <ion-icon name="search-outline"></ion-icon>
                             </span>
                             <span className="text">Search</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="navitem">
                             <a href="#">
