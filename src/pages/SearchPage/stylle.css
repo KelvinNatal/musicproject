@@ -1,7 +1,7 @@
 .conteudoNovo{
     margin: 0px;
     height: 1000px;
-    width: 1559px;
+    width: 100%;
     background-color: #1c1c1c;
 }
 
@@ -19,6 +19,7 @@
     height: 3vw;
     width: 70vw;
     border-radius: 10px;
+    margin-bottom: 2%;
 }
 
 .searchBar{
@@ -42,4 +43,20 @@
     padding-left: 4px;
     padding-top: 3px;
 
+}
+
+.dados{
+    margin-top: 25px;
+
+}
+
+.imagem{
+    height: 80px;
+    width: 80px;
+}
+
+
+.listMusic{
+    margin-top: 1%;
+    margin-left: 8%;
 }

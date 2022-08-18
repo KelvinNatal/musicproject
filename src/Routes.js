@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CardMusic from "./components/CardMusic";
 import NavBar from "./components/navbar";
 import HomePage from "./pages/HomePage";
 import PlayerPage from "./pages/PlayerPage";
