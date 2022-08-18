@@ -26,6 +26,23 @@ const Playlist = () => {
       }
     }
 
+    /*var test = (i) => {
+      var som1 = document.getElementById(i);    
+        
+        if(som1 == null){
+          return som1;
+        }
+      
+            som1.onloadeddata = function () {
+            console.log("O som tem " + som1.duration + " segundos");
+        
+      }*/
+     /* function myFunction() {
+        var x = document.getElementById("myAudio").duration;
+        console.log(x)
+      }*/
+    
+
     return (
       <div className="playlist no_drag">,
       
@@ -43,6 +60,7 @@ const Playlist = () => {
               onClick={() => {
                 SetCurrent(i)
               }}
+              
             > 
               <div className='musicContainer d-flex'>
                 <div className='titulao d-flex'>
@@ -58,10 +76,8 @@ const Playlist = () => {
                 <div className='duracaoDesc'>
                   
                 <audio
-                  onCanPlay={(e) => setDur(e.target.duration)}
-                  ref={audio}
+                  onChange={(e) => setDur(e.target.duration)}
                   type="audio/mpeg"
-                  preload="true"
                   src={songslist[currentSong].fileUrl}
                 />
                     {fmtMSS(dur)}
